@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Kota extends Model
+class Layanan extends Model
 {
+    protected $table = 'layanan';
     public function laundry()
     {
-        return $this->hasMany('App\Laundry');
+        return $this->belongsTo('App\Laundry');
     }
-
 }
